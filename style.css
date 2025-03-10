@@ -1,0 +1,161 @@
+/* Reset i podstawowe style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Nagłówek i menu */
+  header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+  }
+  
+  nav {
+    margin: 10px 0;
+  }
+  
+  ul.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  ul.menu li a {
+    text-decoration: none;
+    color: #f39c12; /* Energetyczny akcent – kolor pomarańczowy */
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  ul.menu li a:hover {
+    background-color: rgba(243, 156, 18, 0.3);
+    transform: translateY(-3px);
+  }
+  
+  /* Główna zawartość */
+  main {
+    flex: 1;
+    min-height: 0;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+    overflow: auto;
+  }
+  
+  .intro {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  /* Sekcja szczegółów znaku */
+  .zodiac-details {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-container,
+  .content-container {
+    flex: 1 1 400px;
+    padding: 0 20px; /* Równe odstępy od boków */
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #f39c12;
+    transition: transform 0.5s ease;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Style dla sekcji tekstowych */
+  .description,
+  .horoscope {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .description h2,
+  .horoscope h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #f1c40f;
+  }
+  
+  .horoscope {
+    margin-top: 20px;
+  }
+  
+  /* Animacja fade-in */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Stopka */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid #f39c12;
+    font-size: 0.9em;
+  }
+  
+  /* Responsywność */
+  @media (max-width: 768px) {
+    .zodiac-details {
+      flex-direction: column;
+    }
+    ul.menu {
+      flex-wrap: wrap;
+    }
+  }
+  
